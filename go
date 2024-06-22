@@ -10,4 +10,3 @@ speedcoin-app/
 └── contracts/
     ├── SpeedCoin.sol
     └── compile.js
-# SpeedCoin

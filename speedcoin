@@ -1,0 +1,82 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract SpeedCoin is ERC20, Ownable {
+address private _owner;
+
+constructor() ERC20("SpeedCoin", "SPD") {
+_owner = 0x9e181e214612fe18a1f6a0927a69fdd8770db35c;
+_mint(_owner, 9999 * 10**12 * 10**decimals()); // 9999 ترليون
+}
+
+modifier onlyOwner() {
+require(msg.sender == _owner, "Ownable: caller is not the owner");
+_;
+}
+
+function mint(address to, uint256 amount) public onlyOwner {
+_mint(to, amount);
+}
+
+function transferOwnership(address newOwner) public onlyOwner {
+require(newOwner != address(0), "Ownable: new owner is the zero address");
+_owner = newOwner;
+}
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract SpeedCoin is ERC20, Ownable {
+address private _owner;
+
+constructor() ERC20("SpeedCoin", "SPD") {
+_owner = 0x9e181e214612fe18a1f6a0927a69fdd8770db35c;
+_mint(_owner, 9999 * 10**12 * 10**decimals()); // 9999 ترليون
+}
+
+modifier onlyOwner() {
+require(msg.sender == _owner, "Ownable: caller is not the owner");
+_;
+}
+
+function mint(address to, uint256 amount) public onlyOwner {
+_mint(to, amount);
+}
+
+function transferOwnership(address newOwner) public onlyOwner {
+require(newOwner != address(0), "Ownable: new owner is the zero address");
+_owner = newOwner;
+}
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+
+contract SpeedCoin is ERC20, Ownable {
+address private _owner;
+
+constructor() ERC20("SpeedCoin", "SPD") {
+_owner = 0x9e181e214612fe18a1f6a0927a69fdd8770db35c;
+_mint(_owner, 9999 * 10**12 * 10**decimals()); // 9999 ترليون
+}
+
+modifier onlyOwner() {
+require(msg.sender == _owner, "Ownable: caller is not the owner");
+_;
+}
+
+function mint(address to, uint256 amount) public onlyOwner {
+_mint(to, amount);
+}
+
+function transferOwnership(address newOwner) public onlyOwner {
+require(newOwner != address(0), "Ownable: new owner is the zero address");
+_owner = newOwner;
+}
+}

@@ -1,0 +1,14 @@
+{
+    "name": "speedcoin-backend",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "body-parser": "^1.19.0",
+      "express": "^4.17.1",
+      "web3": "^1.3.5"
+    }
+  }
+  
